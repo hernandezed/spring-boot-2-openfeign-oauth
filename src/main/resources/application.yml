@@ -1,0 +1,14 @@
+spring.security.oauth2.client:
+  registration:
+    #Repeat block for any number of AuthZ servers
+    twitter-auth: #unique supplier service name
+      client-id: 5N7o6LidTnG60Sh2WH7X7gFH4
+      client-secret: FKL7lP5HhBQadB1b5tkunEbLVSKxVG5yuymAtxciZnBanAkYmA
+      authorization-grant-type: client_credentials
+      client-authentication-method: post
+  provider:
+    #Repeat block for any number of AuthZ servers
+    twitter-auth:
+      token-uri: https://api.twitter.com/oauth2/token
+twitter.service:
+  url: https://api.twitter.com/1.1
